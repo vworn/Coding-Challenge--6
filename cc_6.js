@@ -29,3 +29,17 @@ const calculateBonus = (salary, performanceRating) => {
 // Test cases
 calculateBonus(5000, "Excellent"); // Expected output: "Bonus: $1000"
 calculateBonus(7000, "Good");      // Expected output: "Bonus: $700"
+
+// Task 4: Parameters and Arguments - Subscription Pricing Model
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let pricing = {
+        "Basic": 10, // Basic plan costs $10 per month
+        "Premium": 20, // Premium plan costs $20 per month
+        "Enterprise": 50 // Enterprise plan costs $50 per month
+    };
+    let totalCost = (pricing[plan] * months) - discount; // Compute total subscription cost with discount
+    console.log(`Total Cost: $${totalCost}`); // Print the total cost
+}
+// Test cases
+calculateSubscriptionCost("Basic", 6, 10); // Expected output: "Total Cost: $50"
+calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Total Cost: $240"
